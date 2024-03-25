@@ -1,12 +1,12 @@
-<?php 
+<?php
 
 namespace Src;
 
 use Error;
 
-class Route{
+class Route
+{
     private static array $routes = [];
-
     private static string $prefix = '';
 
     public static function setPrefix($value)

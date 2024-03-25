@@ -1,12 +1,13 @@
-<?php 
+<?php
 
 namespace Src;
 
 use Error;
 
-class Application{
+class Application
+{
     private Settings $settings;
-    private Route $route
+    private Route $route;
 
     public function __construct(Settings $settings)
     {
@@ -17,7 +18,7 @@ class Application{
     public function __get($key)
     {
         if ($key === 'settings') {
-           return $this->settings;
+            return $this->settings;
         }
         throw new Error('Accessing a non-existent property');
     }
@@ -27,5 +28,4 @@ class Application{
         $this->route->setPrefix($this->settings->getRootPath());
         $this->route->start();
     }
-
 }

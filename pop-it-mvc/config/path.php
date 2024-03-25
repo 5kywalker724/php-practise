@@ -1,5 +1,5 @@
 <?php
-return[
+return [
     'root' => 'pop-it-mvc',
     'classes' => [
         'app',
